@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        excludeRoutes: [
+        excludedRoutes: [
           `/wp/v2/users/**`,
           `/wp/v2/settings*`,
           `/wp/v2/themes*`,
@@ -43,6 +43,18 @@ module.exports = {
           sourceUrl: `http://localhost:8080`,
           replacementUrl: ``,
         },
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Teko`,
+            variants: ['200', '400', '500', '600', '700'],
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
